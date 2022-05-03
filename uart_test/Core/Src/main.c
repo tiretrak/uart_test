@@ -182,10 +182,10 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_USART2_UART_Init();
   MX_DMA_Init();
-//  MX_I2C1_Init();
-  MX_USART1_UART_Init();
+  MX_USART2_UART_Init();
+  //  MX_USART1_UART_Init();
+  //  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 
   //start MIDI message reception with interrupt.
@@ -255,14 +255,14 @@ int main(void)
 //	  HAL_UART_Transmit(&huart1,"cheers\n",7,1000);
 //	  HAL_Delay(1000);
 
-	  HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_12);
-	  HAL_Delay(100);
-	  HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_13);
-	  HAL_Delay(100);
-	  HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_14);
-	  HAL_Delay(100);
-	  HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_15);
-	  HAL_Delay(100);
+//	  HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_12);
+//	  HAL_Delay(100);
+//	  HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_13);
+//	  HAL_Delay(100);
+//	  HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_14);
+//	  HAL_Delay(100);
+//	  HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_15);
+//	  HAL_Delay(100);
 //	  LCD_Clear;
 //	  HAL_Delay(100);
 //      if(huart2.RxXferCount==0)
@@ -506,10 +506,10 @@ HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_13);
 HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_14);
 HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_15);
 
-//for (int i=0;i<2;i++)
-//{
+for (int i=0;i<200;i++)
+{
 //	buf[i] = midi_recieved_buf;
-//}
+}
 
 //I2C_send(0b00000001,0);   // очистка дисплея
 //I2C_send(0b10000000,0);   // переход на 1 строку, тут не обязателен
